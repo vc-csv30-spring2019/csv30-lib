@@ -9,7 +9,7 @@ file(GLOB_RECURSE ASSIGNMENT_INCLUDES RELATIVE ${CMAKE_SOURCE_DIR} "include/*.h"
 list(REMOVE_ITEM ASSIGNMENT_SOURCES "src/${SOURCE_PREFIX}_unittest.cc")
 
 add_executable(${EXEC_NAME} ${ASSIGNMENT_SOURCES} ${ASSIGNMENT_INCLUDES})
-include_directories(include/ cs140/include)
+include_directories(include/ csv13/include)
 
 link_directories(csv13/lib/${PLATFORM})
 link_libraries(gtestd gtest_maind pthread)
