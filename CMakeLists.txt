@@ -11,7 +11,7 @@ list(REMOVE_ITEM ASSIGNMENT_SOURCES "src/${SOURCE_PREFIX}_unittest.cc")
 add_executable(${EXEC_NAME} ${ASSIGNMENT_SOURCES} ${ASSIGNMENT_INCLUDES})
 include_directories(include/ cs140/include)
 
-link_directories(cs140/lib/${PLATFORM})
+link_directories(csv13/lib/${PLATFORM})
 link_libraries(gtestd gtest_maind pthread)
 list(REMOVE_ITEM ASSIGNMENT_SOURCES "src/main.cc")
 add_executable(${EXEC_NAME}_GTest src/${SOURCE_PREFIX}_unittest.cc ${ASSIGNMENT_SOURCES})
