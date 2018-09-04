@@ -12,10 +12,13 @@ if(WIN32)
 	set(PLATFORM "Win32")
 	set(CMAKE_CXX_FLAGS_RELEASE "/MT")
 	set(CMAKE_CXX_FLAGS_DEBUG "/MTd")
+	link_libraries(gtestd gtest_maind)
 elseif(APPLE)
 	set(PLATFORM "Darwin")
+	link_libraries(gtestd gtest_maind pthread)
 else()
 	set(PLATFORM "Linux")
+	link_libraries(gtestd gtest_maind pthread)
 endif()
 
 
