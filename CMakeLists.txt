@@ -27,7 +27,7 @@ link_libraries(gtestd gtest_maind)
 list(REMOVE_ITEM ASSIGNMENT_SOURCES "src/main.cc")
 add_executable(${EXEC_NAME}_GTest src/${SOURCE_PREFIX}_unittest.cc ${ASSIGNMENT_SOURCES})
 
-if(LINUX AND NOT DARWIN)
+if(UNIX AND NOT DARWIN)
 target_compile_options(${EXEC_NAME}_GTest PRIVATE -D_GLIBCXX_USE_CXX11_ABI=0)
 target_link_libraries(${EXEC_NAME}_GTest -no-pie)
 endif()
